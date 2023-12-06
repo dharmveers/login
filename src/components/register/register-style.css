@@ -1,0 +1,30 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.form-input{
+    width: 500px;
+    height: auto;
+    background-color: #e2e2e2;
+    border-radius: 20px;
+    margin: auto;
+    padding: 2rem;
+    text-align: left;
+}
+.input{
+    text-align: left;
+    padding: .3rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    margin-top: 1rem;
+}
+.input input{
+    border: none;
+    outline: none;
+    width: 95%;
+}

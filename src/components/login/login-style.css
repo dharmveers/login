@@ -1,0 +1,46 @@
+.container{
+    display:flex;
+    margin: auto;
+    justify-content: center;
+    height:100vh;
+    width:100%;
+    background-color: grey;
+}
+
+.form-box form{
+    width:400px;
+    height:450px;
+    background-color:white;
+    display: flexbox;
+    margin: auto;
+    padding: 2%;
+    text-align: left;
+}
+  .log-input{
+    border: 2px solid gray;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+  }
+  .log-input input{
+    border: none;
+    outline: none;
+    width: 92%;
+    }
+    label{
+     text-align: left;
+    }
+  form button{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+  }
+.message{
+  display:flex;
+  justify-content:space-between;
+}
