@@ -27,13 +27,13 @@ const Register = () => {
         setErrors(Validation(user))
         try{
           let data={
-            "userName":user.username,
-            "userID":user.userid,
-            "userPass":user.pass,
-            "userRole":user.role
+            userName:user.username,
+            userID:user.userid,
+            userPass:user.pass,
+            userRole:user.role
            }
            console.log(data)
-            axios.post("http://localhost:8000/addUser",{data})
+            axios.post("http://localhost:8000/addUser",data)
                     .then(Response=>console.log(Response))
                     .catch(errors=>console.log(errors));
         }catch(error){
