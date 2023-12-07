@@ -1,9 +1,9 @@
-.container{
+.log-container{
     display:flex;
     margin: auto;
     justify-content: center;
-    height:100vh;
     width:100%;
+    height: 100vh;
     background-color: grey;
 }
 
@@ -15,6 +15,7 @@
     margin: auto;
     padding: 2%;
     text-align: left;
+    margin-top: 20%;
 }
   .log-input{
     border: 2px solid gray;

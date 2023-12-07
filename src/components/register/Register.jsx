@@ -34,8 +34,18 @@ const Register = () => {
            }
            console.log(data)
             axios.post("http://localhost:8000/addUser",data)
-                    .then(Response=>console.log(Response))
-                    .catch(errors=>console.log(errors));
+                    .then(Response=>{
+                        //console.log(Response);
+                        toast.success("User Added Successfully",{
+                            position:"top-center"
+                        });
+                    })
+                    .catch(errors=>{
+                        //console.log(errors)
+                        toast.error("500:Internal Server Error : "+errors,{
+                            position:"top-center"
+                        });
+                    });
         }catch(error){
             toast.error("500: Internal Server Error"+error,{
                 position:"top-center"
@@ -43,7 +53,7 @@ const Register = () => {
         }
     }
     return (
-        <div className="container">
+        <div className="reg-container">
             <div className="header mt-3">
                 <div className="title"><h1>Registration Form</h1></div>
                 <div className="underline"></div>

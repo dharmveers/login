@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../login/login-style.css';
 import Validation from '../../Validation';
 const Login = () => {
-
+    let navigate=useNavigate();
     const [visible, setVisible] = useState(false);
     const[errors,setErrors] = useState({});
     const[user,setUser] = useState({
@@ -35,6 +35,7 @@ const Login = () => {
                 toast.success("login Successfully", {
                     position: "top-center"
                 });
+                navigate("/");
             } else {
                 toast.error("email not registered", {
                     position: "top-center"
@@ -50,7 +51,7 @@ const Login = () => {
 
     }
     return (
-        <div className="container">
+        <div className="log-container">
             <div className="form-box">
                 <form onSubmit={handleFormSubmit}>
                     <h1>LOGIN</h1>
